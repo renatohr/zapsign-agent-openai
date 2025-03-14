@@ -10,6 +10,10 @@ from typing import List, Dict, Any
 from agents import Agent, Runner, function_tool, set_tracing_export_api_key, handoff
 
 
+# change the default language of the assistant if you want
+language = "portuguese"
+
+
 load_dotenv()
 set_tracing_export_api_key(os.getenv("OPENAI_API_KEY"))
 
@@ -79,7 +83,7 @@ document_agent = Agent(
     instructions="""
     You are a legal document expert that creates professional documents in markdown format.
     Generate a legal document based on context provided by the user.
-    Please format the document in markdown, including all necessary legal clauses and formatting. Answer in portuguese ask if the user wants to edit or add any information.
+    Please format the document in markdown, including all necessary legal clauses and formatting. Answer in {language} (or the language the user wants) and ask if the user wants to edit or add any information.
     """,
     tools=[get_today_date]
 )
@@ -108,14 +112,17 @@ coordinator_agent = Agent(
 
 async def main():
     interactions = []
-    print('System: Olá! Sou o assistente de criação de documentos e envio para assinatura. Para começar, por favor, diga o tipo de documento que você deseja criar.\n')
+    if language == "portuguese":
+        print('System: Olá! Sou o assistente de criação de documentos e envio para assinatura. Para começar, por favor, diga o tipo de documento que você deseja criar.\n')
+    else:
+        print('System: Hello! I am the document creation and signature sending assistant. To start, please tell me the type of document you want to create.\n')
     while True:
         user_input = input('User: ')
         user_input_line = 'User: ' + user_input
         interactions.append(user_input_line)
 
         interactions_str = '\n'.join(interactions)
-        print('\nPensando...', end='\r')
+        print('\n...', end='\r')
         result = await Runner.run(coordinator_agent, input=interactions_str)
 
         result_line = 'System: ' + result.final_output
