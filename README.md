@@ -4,10 +4,10 @@ Este projeto implementa um agente de IA para criação e envio de documentos par
 
 ## Descrição
 
-O ZapSign Agents OpenAI é um assistente que ajuda na criação de documentos legais e no envio para assinatura digital. O sistema utiliza agentes de IA da OpenAI para:
+O ZapSign Agents OpenAI é um assistente que ajuda na criação de documentos legais e no envio para assinatura digital. O sistema utiliza agentes de IA da OpenAI (https://platform.openai.com/docs/guides/agents-sdk) para:
 
 - Conversar com o usuário e coletar informações sobre o documento
-- Gerar documentos legais em formato markdown
+- Gerar documentos e contratos em formato markdown
 - Enviar os documentos para assinatura através da API da ZapSign
 
 ## Pré-requisitos
@@ -20,7 +20,7 @@ O ZapSign Agents OpenAI é um assistente que ajuda na criação de documentos le
 
 1. Clone este repositório:
    ```bash
-   git clone <url-do-repositorio>
+   git clone https://github.com/renatohr/zapsign-agent-openai
    ```
 
 2. Crie e ative um ambiente virtual:
@@ -226,25 +226,6 @@ As partes concordam em manter a confidencialidade de quaisquer dados ou informa�
 O contrato poderá ser rescindido por ambas as partes mediante aviso prévio de 15 (quinze) dias, sem prejuízo das cobranças proporcionalmente devidas ao período de vigência do contrato.
 
 As partes concordam em manter a confidencialidade de quaisquer dados ou informações fornecidas e reconhecem que essas informações são de propriedade exclusiva da parte divulgadora.
-
-## 7. Rescisão
-
-O contrato poderá ser rescindido por ambas as partes mediante aviso prévio de 15 (quinze) dias, sem prejuízo das cobranças proporcionalmente devidas ao período de vigência do contrato.
-As partes concordam em manter a confidencialidade de quaisquer dados ou informações fornecidas e reconhecem que essas informações são de propriedade exclusiva da parte divulgadora.
-
-## 7. Rescisão
-
-O contrato poderá ser rescindido por ambas as partes mediante aviso prévio de 15 (quinze) dias, sem prejuízo das cobranças proporcionalmente devidas ao período de vigência do contrato.
-
-## 7. Rescisão
-
-O contrato poderá ser rescindido por ambas as partes mediante aviso prévio de 15 (quinze) dias, sem prejuízo das cobranças proporcionalmente devidas ao período de vigência do contrato.
-
-
-O contrato poderá ser rescindido por ambas as partes mediante aviso prévio de 15 (quinze) dias, sem prejuízo das cobranças proporcionalmente devidas ao período de vigência do contrato.
-
-## 8. Foro
-O contrato poderá ser rescindido por ambas as partes mediante aviso prévio de 15 (quinze) dias, sem prejuízo das cobranças proporcionalmente devidas ao período de vigência do contrato.
 
 ## 8. Foro
 
