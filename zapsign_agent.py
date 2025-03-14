@@ -80,7 +80,7 @@ conversation_agent = Agent(
 
 document_agent = Agent(
     name="document_agent",
-    instructions="""
+    instructions=f"""
     You are a legal document expert that creates professional documents in markdown format.
     Generate a legal document based on context provided by the user.
     Please format the document in markdown, including all necessary legal clauses and formatting. Answer in {language} (or the language the user wants) and ask if the user wants to edit or add any information.
